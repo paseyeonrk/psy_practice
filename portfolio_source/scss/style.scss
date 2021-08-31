@@ -1,0 +1,1266 @@
+@charset "utf-8";
+
+@import url("base.css");
+
+:root {
+    --res: #6da1cf;
+    --pc: #e2c0d4;
+    --mo: #bc4e7c;
+    --app: #e7b389;
+    --pcm: #cbdbbf;
+    --etc: #e8e8e8;
+
+    --white: #fff;
+    --gray: #f4f4f4;
+    --black: #202020;
+
+    //  반응형_체험단 사이트 1
+    --res1-point: #d9ec8e;
+    --res1-btn: #a8c43c;
+    --res1-btn-hover: #94b029;
+
+    // 반응형_웹사이트템플릿
+    --res2-point: #ffe5b1;
+    --res2-btn: #fdb827;
+    --res2-btn-hover: #eba719;
+
+    // 반응형_주식사이트
+    --res3-point: #ffdadc;
+    --res3-btn: #c7000a;
+    --res3-btn-hover: #af1119;
+
+    // app_모임어플
+    --app1-point: #bcc8fc;
+    --app1-btn: #3753ca;
+    --app1-btn-hover: #243fb1;
+
+    // app_MTS
+    --app2-point: #c2dfe5;
+    --app2-btn: #376476;
+    --app2-btn-hover: #264f5f;
+
+    // mo_에브리에어 캠페인
+    --mo1-point: #b3e4be;
+    --mo1-btn: #41bf5d;
+    --mo1-btn-hover: #1aa338;
+
+    // pc_금강메디컬
+    --pcm1-point: #fcdaeb;
+    --pcm1-btn: #be4883;
+    --pcm1-btn-hover: #a3326b;
+
+    // pc_삼성로얄
+    --pcm2-point: #d1e5de;
+    --pcm2-btn: #5f8578;
+    --pcm2-btn-hover: #487264;
+
+    // etc_기타작업
+    --etc1-point: #e8e8e8;
+    --etc1-btn: #808080;
+    --etc1-btn-hover: #625f5f;
+}
+
+.blind {
+    text-indent: -9999px;
+    font-size: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 280px;
+    height: 100%;
+    overflow-y: hidden;
+    font-size: 62.5%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    background: var(--white);
+    font-weight: 400;
+    font-family: 'GmarketSansMedium',sans-serif;
+
+    &.table {
+        background: var(--white);
+    }
+}
+
+.header {
+    display: block;
+    width: 100%;
+    height: 175px;
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &.header-sub {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .header__inner {
+        width: 100%;
+        height: 115px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .header__logo {
+            position: absolute;
+            left: 50px;
+            width: 154px;
+            height: 115px;
+            background-image: url(../img/my_logo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+
+            .logo {
+                width: 100%;
+                height: 100%;
+
+                &__link {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .header__icon {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+
+            .icon__txt {
+                line-height: 115px;
+                text-align: center;
+                color: var(--black);
+                font-size: 1.4rem;
+            }
+
+            .icon__img {
+                width: 21px;
+                height: auto;
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                margin-left: -10px;
+
+                /* 손흔드는 애니메이션 */
+                animation: hand 2s;
+                animation-iteration-count: infinite;
+                transform-origin: 25% 100%;
+            }
+        }
+    }
+}
+
+@keyframes hand {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+.back-btn {
+    position: fixed;
+    right: 70px;
+    top: 60px;
+    font-size: 3.5rem;
+    cursor: pointer;
+    z-index: 9;
+
+    a {
+        color: var(--black);
+        transition: all 0.5s;
+
+        &:hover {
+            color: #386289;
+        }
+    }
+}
+
+.section {
+    width: 100%;
+    padding-top: 240px;
+    margin: 0 auto;
+
+    .section__inner {
+        width: 1344px;
+        margin: 0 auto;
+
+        .section-form {
+            width: 100%;
+            margin: 0 0 70px 0;
+
+            strong {
+                font-size: 1.2rem;
+                color: #202020;
+                background: #fff;
+                width: 100%;
+                display: block;
+                margin: 0 0 10px 0;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+
+            .section-form__inner {
+                width: 100%;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+
+                .content-left {
+                    width: 50%;
+                    float: left;
+                    cursor: pointer;
+                    position: relative;
+                }
+
+                .content {
+                    .content-bg {
+                        &::before {
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.8);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                            transition: all 0.5s;
+                        }
+
+                        &:hover::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    .content__txt--hover {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        transition: all 0.5s;
+
+                        p {
+                            font-size: 1.8rem;
+                            padding-bottom: 30px;
+                            color: var(--white);
+                            position: relative;
+
+                            &::before {
+                                content: '';
+                                background-image: url(../img/arrow.png);
+                                background-size: 32px auto;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                width: 32px;
+                                height: 17px;
+                                position: absolute;
+                                left: 40%;
+                                margin-left: -16px;
+                                bottom: 0;
+                                transition: all 0.5s;
+                            }
+                        }
+                    }
+
+                    &:hover .content__txt--hover {
+                        opacity: 1;
+
+                        p::before {
+                            left: 50%;
+                        }
+                    }
+
+                    .content-bg {
+                        height: 550px;
+                        display: flex;
+                        align-items: center;
+                        overflow: hidden;
+                        position: relative;
+
+                        &.content__img--res {
+                            background-color: var(--res);
+                        }
+
+                        &.content__img--pc {
+                            background-color: var(--pc);
+                        }
+
+                        &.content__img--mo {
+                            background-color: var(--mo);
+                        }
+
+                        &.content__img--app {
+                            background-color: var(--app);
+                        }
+
+                        &.content__img--pcm {
+                            background-color: var(--pcm);
+                        }
+
+                        &.content__img--etc {
+                            background-color: var(--etc);
+                        }
+                    }
+                }
+
+                .content-right {
+                    width: 50%;
+                    float: right;
+                    cursor: pointer;
+                    position: relative;
+                }
+
+                .content {
+                    .content__txt {
+                        width: 100%;
+                        background: var(--white);
+                        padding: 0 25px;
+                        overflow: hidden;
+
+                        &::before {
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.8);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                            transition: all 0.5s;
+                        }
+
+                        .txt-tit {
+                            &::before {
+                                position: absolute;
+                                opacity: 0;
+                                transition: all 0.5s;
+                            }
+
+                            &.ver_EG1::before {
+                                content: '체험단 사이트';
+                                color: var(--res);
+                            }
+
+                            // &.ver_EG2::before {
+                            //     content: '체험단 사이트 2';
+                            //     color: var(--res);
+                            // }
+
+                            &.ver_OP::before {
+                                content: '웹 사이트 템플릿';
+                                color: var(--res);
+                            }
+
+                            &.ver_Q::before {
+                                content: '주식 사이트';
+                                color: var(--res);
+                            }
+
+                            // &.ver_L::before {
+                            //     content: '20LOCK';
+                            //     color: var(--res);
+                            // }
+
+                            // &.ver_D::before {
+                            //     content: '더마클라센';
+                            //     color: var(--res);
+                            // }
+
+                            // &.ver_V::before {
+                            //     content: '뷰센스의원';
+                            //     color: var(--pc);
+                            // }
+
+                            &.ver_E::before {
+                                content: '에브리에어 캠페인';
+                                color: var(--mo);
+                            }
+
+                            &.ver_M::before {
+                                content: 'MTS(Mobile Trading System)';
+                                color: var(--app);
+                            }
+
+                            &.ver_MA::before {
+                                content: '모임어플';
+                                color: var(--app);
+                            }
+
+                            // &.ver_H::before {
+                            //     content: '해피라인의원';
+                            //     color: var(--pc);
+                            // }
+
+                            // &.ver_Y::before {
+                            //     content: '연세린의원';
+                            //     color: var(--pc);
+                            // }
+
+                            &.ver_G::before {
+                                content: '금강메디컬병원';
+                                color: var(--pcm);
+                            }
+
+                            &.ver_S::before {
+                                content: '해피라인의원';
+                                color: var(--pcm);
+                            }
+
+                            // &.ver_SM::before {
+                            //     content: '에스엠의원';
+                            //     color: var(--pc);
+                            // }
+
+                            // &.ver_GR::before {
+                            //     content: '그랜드연합의원';
+                            //     color: var(--pc);
+                            // }
+
+                            &.ver_ETC::before {
+                                content: '기타 작업';
+                                color: var(--etc);
+                            }
+                        }
+                    }
+
+                    &:hover .content__txt {
+
+                        .txt-tit::before,
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    .content__txt {
+                        .txt-tit {
+                            float: left;
+                            line-height: 110px;
+                            font-size: 1.8rem;
+                            color: var(--black);
+                            font-family: 'GmarketSansBold',sans-serif;
+                        }
+
+                        .txt-sub {
+                            float: right;
+                            line-height: 110px;
+                            font-size: 1.6rem;
+                            color: var(--black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 공통 */
+
+.order_1,
+.order_2,
+.order_3,
+.order_4,
+.order_5,
+.order_6,
+.order_7,
+.order_8,
+.order_9,
+.order_10,
+.order_11,
+.order_12,
+.order_13,
+.order_14,
+.order_15,
+.order_16,
+.order_17 {
+    opacity: 0;
+    margin-top: -30px;
+}
+
+/* app_ma.html -------------------------------------------------------------------------------------*/
+
+.section {
+    &.section-sub {
+        padding-top: 60px;
+        font-family: 'notokr-medium',sans-serif;
+    }
+
+    .section__inner {
+        &.inner-sub {
+            width: 100%;
+        }
+
+        .content-sub {
+            width: 713px;
+            margin: 0 auto;
+            color: var(--black);
+
+            .content-sub--type {
+                font-size: 1.4rem;
+                font-weight: bold;
+                display: block;
+                margin: 0 0 20px 0;
+                letter-spacing: 0.1px;
+            }
+
+            .content-sub--tit {
+                font-size: 3.4rem;
+                line-height: 1.2;
+                margin: 0 0 70px 0;
+                position: relative;
+
+                span,
+                b {
+                    position: relative;
+                    display: inline-block;
+                    z-index: 2;
+                }
+
+                span::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -0px;
+                    width: 0px;
+                    height: 50%;
+                    margin: 5px 0 0;
+                    transition: all 0.2s ease-in-out;
+                    transition-duration: 1s;
+                    opacity: 0;
+                    z-index: -1;
+                }
+
+                // 체험단 사이트 1
+                &.res1 span::before {
+                    background: var(--res1-point);
+                }
+
+                // 웹 사이트 템플릿
+                &.res2 span::before {
+                    background: var(--res2-point);
+                }
+
+                // 주식사이트
+                &.res3 span::before {
+                    background: var(--res3-point);
+                }
+
+                // // 20lock
+                // &.res4 span::before {
+                //     background: var(--res4-point);
+                // }
+
+                // // 더마클라센
+                // &.res5 span::before {
+                //     background: var(--res5-point);
+                // }
+
+                // 모임어플
+                &.app1 span::before {
+                    background: var(--app1-point);
+                }
+
+                // MTS
+                &.app2 span::before {
+                    background: var(--app2-point);
+                }
+
+                // 에브리에어캠페인
+                &.mo1 span::before {
+                    background: var(--mo1-point);
+                }
+
+                // 금강메디컬
+                &.pcm1 span::before {
+                    background: var(--pcm1-point);
+                }
+
+                // 삼성로얄
+                &.pcm2 span::before {
+                    background: var(--pcm2-point);
+                }
+
+                // 기타작업
+                &.etc1 span::before {
+                    background: var(--etc1-point);
+                }
+
+                b::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -0px;
+                    width: 0px;
+                    height: 50%;
+                    margin: 5px 0 0;
+                    transition: all 0.2s ease-in-out;
+                    transition-duration: 0.5s;
+                    opacity: 0;
+                    z-index: -1;
+                }
+
+                // 체험단 사이트 1
+                &.res1 b::before {
+                    background: var(--res1-point);
+                }
+
+                // 웹 사이트 템플릿
+                &.res2 b::before {
+                    background: var(--res2-point);
+                }
+
+                // 주식 사이트
+                &.res3 b::before {
+                    background: var(--res3-point);
+                }
+
+                // // 20lock
+                // &.res4 b::before {
+                //     background: var(--res4-point);
+                // }
+
+                // // 더마클라센
+                // &.res5 b::before {
+                //     background: var(--res5-point);
+                // }
+
+                // 모임어플
+                &.app1 b::before {
+                    background: var(--app1-point);
+                }
+
+                // MTS
+                &.app2 b::before {
+                    background: var(--app2-point);
+                }
+
+                // 에브리에어캠페인
+                &.mo1 b::before {
+                    background: var(--mo1-point);
+                }
+
+                // 금강메디컬
+                &.pcm1 b::before {
+                    background: var(--pcm1-point);
+                }
+
+                // 삼성로얄
+                &.pcm2 b::before {
+                    background: var(--pcm2-point);
+                }
+
+                // 기타작업
+                &.etc1 b::before {
+                    background: var(--etc1-point);
+                }
+
+                span.on::before,
+                b.on::before {
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+
+            .content-sub--reference {
+                width: 100%;
+                margin: 0 0 60px 0;
+
+                &::after {
+                    content: '';
+                    clear: both;
+                    display: block;
+                }
+
+                li {
+                    width: 50%;
+                    float: left;
+
+                    h3 {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        width: 70%;
+                        padding: 0 0 10px 0;
+                        margin: 0 0 10px 0;
+                        border-bottom: 3px solid var(--black);
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                        color: #333;
+                        padding-right: 20px;
+                        word-break: keep-all;
+                        line-height: 1.2;
+                    }
+                }
+            }
+
+            .content-sub--con {
+                width: 100%;
+                margin: 0 0 50px 0;
+
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    color: #333;
+                    margin: 0 0 10px 0;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    line-height: 1.5;
+                    word-break: keep-all;
+                    color: #333;
+
+                    span {
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                        padding-left: 5px;
+
+                        &::before {
+                            content: '·';
+                            position: absolute;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+            .content-sub--link {
+                display: block;
+                margin: 0 0 10px 0;
+                width: 241px;
+                height: 60px;
+                line-height: 58px;
+                position: relative;
+                padding: 0 55px 0 38px;
+                font-size: 1.5rem;
+                color: #fff !important;
+                border-radius: 3px;
+                transition: all 0.5s;
+
+                // 체험단 사이트 1
+                &.res1 {
+                    background: var(--res1-btn);
+                    border: 2px solid var(--res1-btn);
+                }
+
+                // 웹 사이트 템플릿
+                &.res2 {
+                    background: var(--res2-btn);
+                    border: 2px solid var(--res2-btn);
+                }
+
+                // 주식사이트
+                &.res3 {
+                    background: var(--res3-btn);
+                    border: 2px solid var(--res3-btn);
+                }
+
+                // // 20lock
+                // &.res4 {
+                //     background: var(--res4-btn);
+                //     border: 2px solid var(--res4-btn);
+                // }
+
+                // // 더마클라센
+                // &.res5 {
+                //     background: var(--res5-btn);
+                //     border: 2px solid var(--res5-btn);
+                // }
+
+                // 모임어플
+                &.app1 {
+                    background: var(--app1-btn);
+                    border: 2px solid var(--app1-btn);
+                }
+
+                // MTS
+                &.app2 {
+                    background: var(--app2-btn);
+                    border: 2px solid var(--app2-btn);
+                }
+
+                // 에브리에어캠페인
+                &.mo1 {
+                    background: var(--mo1-btn);
+                    border: 2px solid var(--mo1-btn);
+                }
+
+                // 금강메디컬
+                &.pcm1 {
+                    background: var(--pcm1-btn);
+                    border: 2px solid var(--pcm1-btn);
+                }
+
+                // 삼성로얄
+                &.pcm2 {
+                    background: var(--pcm2-btn);
+                    border: 2px solid var(--pcm2-btn);
+                }
+
+                // 기타작업
+                &.etc1 {
+                    background: var(--etc1-btn);
+                    border: 2px solid var(--etc1-btn);
+                }
+
+                &::after {
+                    content: "\f30b";
+                    font-family: "Line Awesome Free";
+                    font-size: 2.4rem;
+                    font-weight: 900;
+                    display: block;
+                    width: 24px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 38px;
+                    transition: all 0.5s;
+                }
+
+                // 체험단 사이트 1
+                &.res1:hover {
+                    background: var(--res1-btn-hover);
+                    border: 2px solid var(--res1-btn-hover);
+                }
+
+                // 웹 사이트 템플릿
+                &.res2:hover {
+                    background: var(--res2-btn-hover);
+                    border: 2px solid var(--res2-btn-hover);
+                }
+
+                // 주식 사이트
+                &.res3:hover {
+                    background: var(--res3-btn-hover);
+                    border: 2px solid var(--res3-btn-hover);
+                }
+
+                // // 20lock
+                // &.res4:hover {
+                //     background: var(--res4-btn-hover);
+                //     border: 2px solid var(--res4-btn-hover);
+                // }
+
+                // // 더마클라센
+                // &.res5:hover {
+                //     background: var(--res5-btn-hover);
+                //     border: 2px solid var(--res5-btn-hover);
+                // }
+
+                // 모임어플
+                &.app1:hover {
+                    background: var(--app1-btn-hover);
+                    border: 2px solid var(--app1-btn-hover);
+                }
+
+                // MTS
+                &.app2:hover {
+                    background: var(--app2-btn-hover);
+                    border: 2px solid var(--app2-btn-hover);
+                }
+
+                // 에브리에어캠페인
+                &.mo1:hover {
+                    background: var(--mo1-btn-hover);
+                    border: 2px solid var(--mo1-btn-hover);
+                }
+
+                // 금강메디컬
+                &.pcm1:hover {
+                    background: var(--pcm1-btn-hover);
+                    border: 2px solid var(--pcm1-btn-hover);
+                }
+
+                // 삼성로얄
+                &.pcm2:hover {
+                    background: var(--pcm2-btn-hover);
+                    border: 2px solid var(--pcm2-btn-hover);
+                }
+
+                // 기타작업
+                &.etc1:hover {
+                    background: var(--etc1-btn-hover);
+                    border: 2px solid var(--etc1-btn-hover);
+                }
+
+                &:hover::after {
+                    right: 30px;
+                }
+            }
+
+            &.sub-img {
+                width: 100%;
+                position: relative;
+                margin: 100px 0 0;
+
+                &.bg-gray {
+                    background-color: var(--gray);
+                }
+
+                div {
+                    width: 1400px;
+                    margin: 0 auto;
+
+                    &.full_img {
+                        width: 100%;
+                    }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+        }
+
+        .etc__txt {
+            width: 100%;
+            margin: 0 0 70px 0;
+
+            ul {
+                overflow: hidden;
+
+                li {
+                    position: relative;
+                    color: #c5c5c5;
+                    font-size: 1.2rem;
+                    padding: 0 0 5px 10px;
+
+                    &::before {
+                        content: '*';
+                        position: absolute;
+                        left: 0;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-box {
+    width: 1000px;
+    margin: 80px auto;
+
+    strong {
+        font-size: 3rem;
+        font-family: 'GmarketSansBold',sans-serif;
+        display: block;
+        color: var(--res2-btn);
+        border-bottom: 5px solid var(--res2-btn);
+        padding-bottom: 10px;
+
+        &.res2-ver {
+            color: var(--res2-btn);
+            border-bottom: 5px solid var(--res2-btn);
+        }
+
+        &.etc1-ver {
+            color: var(--etc1-btn);
+            border-bottom: 5px solid var(--etc1-btn);
+        }
+
+    }
+
+    table {
+        width: 100%;
+        margin: 30px auto 0;
+        border-collapse: collapse;
+        color: #555;
+
+        thead {
+
+            tr {
+                height: 50px;
+                line-height: 52px;
+                border-top: 1px solid #d6d6d6;
+                border-bottom: 1px solid #d6d6d6;
+
+                td {
+                    padding: 0 2%;
+                    color: #7a7a7a;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                height: 60px;
+                line-height: 60px;
+
+                &:hover {
+                    background: var(--gray);
+                    cursor: pointer;
+                }
+
+                td {
+                    padding: 0 2%;
+                    color: var(--black);
+                    font-size: 1.3rem;
+
+                    &.res2-ver {
+                        color: var(--res2-btn);
+                    }
+
+                    &.etc1-ver {
+                        color: var(--etc1-btn);
+                    }
+
+                    a {
+                        color: var(--black);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1440px) {
+
+    /* // 이제 문서 내 모든 rem 단위가 영향을 받습니다. */
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        height: 150px;
+
+        &.header-sub {
+            display: none;
+        }
+
+        .header__inner {
+            height: 90px;
+
+            .header__logo {
+                left: 3%;
+                width: 120px;
+                height: 90px;
+            }
+
+            .header__icon {
+                width: 190px;
+                .icon__img {
+                    top: 10px;
+                }
+                .icon__txt {
+                    line-height: 90px;
+                }
+            }
+        }
+    }
+
+    .back-btn {
+        top: 20px;
+        right: 3%;
+    }
+
+    .section {
+        padding-top: 200px;
+
+        &.section-sub {
+            padding-top: 60px;
+        }
+
+        .section__inner {
+            width: 94%;
+
+            .section-form {
+                .section-form__inner {
+                    .content {
+                        .content-bg {
+                            height: auto;
+                        }
+
+                        .content__txt {
+                            padding: 0 15px;
+
+                            .txt-tit {
+                                line-height: 70px;
+                            }
+
+                            .txt-sub {
+                                line-height: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content-sub {
+                width: 94%;
+
+                &.sub-img {
+
+                    div {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-box {
+        width: 94%;
+        margin: 60px auto;
+    }
+
+}
+
+@media all and (max-width: 768px) {
+
+    .header {
+        height: 127px;
+
+        .header__inner {
+            height: 67px;
+
+            .header__logo {
+                left: 3%;
+                width: 90px;
+                height: 67px;
+            }
+
+            .header__icon {
+                .icon__img {
+                    top: 1px;
+                }
+                .icon__txt {
+                    line-height: 67px;
+                }
+            }
+        }
+    }
+
+    .section {
+        .section__inner {
+            .section-form {
+                margin:  0 0 30px 0;
+                .section-form__inner {
+                    .content-left {
+                        width: 100%;
+                    }
+                    .content-right {
+                        width: 100%;
+                    }
+                    .content {
+        
+                        .content__txt {
+                            padding: 0 5px;
+        
+                            .txt-tit {
+                                line-height: 60px;
+                            }
+        
+                            .txt-sub {
+                                line-height: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-sub {
+                .content-sub--tit {
+                    font-size: 3rem;
+                }
+                .content-sub--link {
+                    width: 210px;
+                    height: 50px;
+                    line-height: 48px;
+                }
+            }
+        }
+    }
+
+}
+
+@media all and (max-width: 414px) {
+    html {
+        font-size: 40%;
+    }
+    .header {
+        height: 127px;
+        padding-top: 0;
+
+        .header__inner {
+            height: 47px;
+
+            .header__logo {
+                left: 3%;
+                width: 50px;
+                height: 37px;
+                top: 15%;
+            }
+
+            .header__icon {
+                top: 58px;
+                .icon__img {
+                    top: 1px;
+                }
+                .icon__txt {
+                    line-height: 67px;
+                }
+            }
+        }
+    }
+
+    .section {
+        padding-top: 150px;
+        .section__inner {
+            .content-sub {
+                .content-sub--tit {
+                    font-size: 2.8rem;
+                }
+                .content-sub--link {
+                    width: 150px;
+                    height: 40px;
+                    line-height: 38px;
+                    padding: 0 55px 0 20px;
+
+                    &::after {
+                        top: 0;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

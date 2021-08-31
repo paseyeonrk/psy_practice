@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+/* 폰트*/
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'notokr-black';
+  src: url('../fonts/notosanskr-black.woff2') format('woff2'),
+    url('../fonts/notosanskr-black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'notokr-bold';
+  src: url('../fonts/notosanskr-bold.woff2') format('woff2'),
+    url('../fonts/notosanskr-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'notokr-demilight';
+  src: url('../fonts/notosanskr-demilight.woff2') format('woff2'),
+    url('../fonts/notosanskr-demilight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'notokr-light';
+  src: url('../fonts/notosanskr-light.woff2') format('woff2'),
+    url('../fonts/notosanskr-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'notokr-medium';
+  src: url('../fonts/notosanskr-medium.woff2') format('woff2'),
+    url('../fonts/notosanskr-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'notokr-regular';
+  src: url('../fonts/notosanskr-regular.woff2') format('woff2'),
+    url('../fonts/notosanskr-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'notokr-thin';
+  src: url('../fonts/notosanskr-thin.woff2') format('woff2'),
+    url('../fonts/notosanskr-thin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.notokr-black {
+  font-family: 'notokr-black';
+}
+
+.notokr-bold {
+  font-family: 'notokr-bold';
+}
+
+.notokr-medium {
+  font-family: 'notokr-medium';
+}
+
+.notokr-regular {
+  font-family: 'notokr-regular';
+}
+
+.notokr-light {
+  font-family: 'notokr-light';
+}
+
+.notokr-demilight {
+  font-family: 'notokr-demilight';
+}
+
+.notokr-thin {
+  font-family: 'notokr-thin';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  letter-spacing: -0.5px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+
+  /* 모바일 가로모드 폰트확대 방지 */
+  -webkit-text-size-adjust: none;
+}
+
+/* for AXISJ */
+select,
+input,
+a,
+button {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th {
+  word-wrap: break-word
+}
+
+table td {
+  word-wrap: break-word
+}
+
+/* 이미지 및 필드셋에서 보더 표시 초기화 */
+img,
+fieldset {
+  border: none;
+}
+
+img,
+object {
+  vertical-align: top;
+}
+
+/* 링크 테두리 제거 */
+a {
+  outline: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* 버튼 초기화 */
+button {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+button:focus {
+  border: 0;
+  outline: none;
+}
